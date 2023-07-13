@@ -2,6 +2,7 @@ import axios, { AxiosRequestConfig } from "axios";
 
 export interface FetchResponse<T> {
   count: number;
+  next: string | null
   results: T[];
 }
 
@@ -9,7 +10,7 @@ export interface FetchResponse<T> {
 const axiosInstance = axios.create({
   baseURL: "https://api.rawg.io/api",
   params: {
-    key: "",
+    key: "6659512cfc624ecb8b49149ee4ef4358",
   },
 });
 
