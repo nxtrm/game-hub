@@ -1,4 +1,4 @@
-import { SimpleGrid, Spinner, Text } from "@chakra-ui/react";
+import { SimpleGrid, Spinner, Text, useBoolean } from "@chakra-ui/react";
 import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import useGames from "../hooks/useGames";
@@ -22,6 +22,7 @@ const GameGrid = () => {
   const fetchedGamesCount =
     data?.pages.reduce((total, page) => total + page.results.length, 0) || 0;
 
+  const [flag, setFlag] = useBoolean();
   return (
     <>
       <InfiniteScroll
@@ -45,7 +46,9 @@ const GameGrid = () => {
             <React.Fragment key={index}>
               {page.results.map((game) => (
                 <GameCardContainer key={game.id}>
-                  <GameCard game={game} />
+                  <div onMouseEnter={setFlag.on} onMouseLeave={setFlag.off}>
+                    <GameCard game={game} hover={flag} />
+                  </div>
                 </GameCardContainer>
               ))}
             </React.Fragment>
