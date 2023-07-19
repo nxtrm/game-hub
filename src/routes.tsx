@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import GameDetailsPage from "./pages/GameDetailsPage";
 import Layout from "./pages/Layout";
 import ErrorPage from "./pages/ErrorPage";
+import LoginCard from "./components/LoginCard";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,14 @@ const router = createBrowserRouter([
       {
         path: "/games/:slug",
         element: <GameDetailsPage />,
+      },
+      {
+        path: "/login",
+        element: <LoginCard />,
+      },
+      {
+        path: "/signup",
+        element: <LoginCard />,
       },
     ],
   },

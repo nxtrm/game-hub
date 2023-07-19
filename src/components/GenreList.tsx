@@ -10,6 +10,7 @@ import {
 import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 import UseGameQueryStore from "../store";
+import LoginCard from "./LoginCard";
 
 const GenreList = () => {
   const { data, isLoading, error } = useGenres();
@@ -23,6 +24,7 @@ const GenreList = () => {
 
   return (
     <>
+      <LoginCard />
       <Heading fontSize="2xl" marginTop={9} marginBottom={3}>
         Genres
       </Heading>
