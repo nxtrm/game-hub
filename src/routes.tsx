@@ -4,7 +4,8 @@ import ErrorPage from "./pages/ErrorPage";
 import GameDetailsPage from "./pages/GameDetailsPage";
 import HomePage from "./pages/HomePage";
 import Layout from "./pages/Layout";
-import PaymentsPage from "./pages/PaymentsPage";
+import PlansPage from "./pages/PlansPage";
+import PaymentPage from "./pages/PaymentPage";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/plans",
-        element: <PaymentsPage />,
+        element: <PlansPage />,
+      },
+      {
+        path: "/plans/:plan",
+        element: <PaymentPage />,
       },
     ],
   },

@@ -1,5 +1,4 @@
-import { ListItem, ListIcon, Text, HStack } from "@chakra-ui/react";
-import React from "react";
+import { HStack, ListIcon, ListItem, Text } from "@chakra-ui/react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 interface Props {

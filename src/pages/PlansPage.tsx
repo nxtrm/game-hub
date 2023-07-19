@@ -1,23 +1,9 @@
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Heading,
-  List,
-  ListIcon,
-  ListItem,
-  SimpleGrid,
-  Text,
-  position,
-} from "@chakra-ui/react";
-import PaymentCard from "../components/PaymentCard";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import { BsCheckLg } from "react-icons/bs";
+import { Heading, List, SimpleGrid } from "@chakra-ui/react";
 import FeatureItem from "../components/FeatureItem";
+import PaymentCard from "../components/PaymentCard";
+import { Navigate } from "react-router-dom";
 
-const PaymentsPage = () => {
+const PlansPage = () => {
   return (
     <>
       <Heading
@@ -37,11 +23,12 @@ const PaymentsPage = () => {
           alignItems: "center",
           justifyContent: "center",
         }}
-        spacing={4}
+        spacing={7}
         templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
       >
         <PaymentCard
-          // button_fn={() => setState(false)}
+          button_fn={() => console.log("free")}
+          isActive={false}
           description={
             <List spacing={3}>
               <FeatureItem isPositive={true} feature="Game Discovery" />
@@ -54,25 +41,11 @@ const PaymentsPage = () => {
           price={0}
           name="Free"
         />
-
-        <Card
-          _hover={{
-            transform: "scale(1.03)",
-            transition: "transform .15s ease-in",
-          }}
-          scale={"110%"}
-          borderColor={"gray.500"}
-          borderWidth={3}
-        >
-          <CardHeader>
-            <Heading paddingY={3} size="xl">
-              5$/mo
-            </Heading>
-            <Heading color={"gray.300"} size="md">
-              Basics
-            </Heading>
-          </CardHeader>
-          <CardBody>
+        <PaymentCard
+          button_fn={() => console.log("basics")}
+          isActive={true}
+          // button_fn={() => setState(false)}
+          description={
             <List spacing={3}>
               <FeatureItem isPositive={true} feature="Full Game Access" />
               <FeatureItem isPositive={true} feature="Item drops" />
@@ -80,13 +53,14 @@ const PaymentsPage = () => {
               <FeatureItem isPositive={false} feature="Premium Games" />
               <FeatureItem isPositive={false} feature="Coaching" />
             </List>
-          </CardBody>
-          <CardFooter>
-            <Button colorScheme="green">Subscribe</Button>
-          </CardFooter>
-        </Card>
+          }
+          price={5}
+          name="Basics"
+        />
 
         <PaymentCard
+          button_fn={() => console.log("premium")}
+          isActive={false}
           // button_fn={() => setState(false)}
           description={
             <List spacing={3}>
@@ -105,4 +79,4 @@ const PaymentsPage = () => {
   );
 };
 
-export default PaymentsPage;
+export default PlansPage;
