@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import GameDetailsPage from "./pages/GameDetailsPage";
-import Layout from "./pages/Layout";
+import AccountPage from "./pages/AccountPage";
 import ErrorPage from "./pages/ErrorPage";
-import LoginCard from "./components/LoginCard";
+import GameDetailsPage from "./pages/GameDetailsPage";
+import HomePage from "./pages/HomePage";
+import Layout from "./pages/Layout";
+import PaymentsPage from "./pages/PaymentsPage";
 
 const router = createBrowserRouter([
   {
@@ -17,12 +18,12 @@ const router = createBrowserRouter([
         element: <GameDetailsPage />,
       },
       {
-        path: "/login",
-        element: <LoginCard />,
+        path: "/account",
+        element: <AccountPage />,
       },
       {
-        path: "/signup",
-        element: <LoginCard />,
+        path: "/plans",
+        element: <PaymentsPage />,
       },
     ],
   },

@@ -24,7 +24,6 @@ const GenreList = () => {
 
   return (
     <>
-      <LoginCard />
       <Heading fontSize="2xl" marginTop={9} marginBottom={3}>
         Genres
       </Heading>
