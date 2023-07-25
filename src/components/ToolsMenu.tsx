@@ -20,7 +20,7 @@ const ToolsMenu = () => {
       </MenuButton>
       <MenuList>
         <MenuGroup title="Profile">
-          <Link to="/account">
+          <Link to={"/account/" + "1"}>
             <MenuItem>My Account</MenuItem>
           </Link>
           <Link to="/plans">

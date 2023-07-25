@@ -1,0 +1,5 @@
+pass account info as a context element
+change the hardcoded account ID in the ToolsMenu
+add overview, statistics and account settings elements in the Account pages
+make subscribe buttons work
+continue developing the account page. take inspiration from https://rawg.io/@nxtrm

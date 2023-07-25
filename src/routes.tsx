@@ -19,7 +19,7 @@ const router = createBrowserRouter([
         element: <GameDetailsPage />,
       },
       {
-        path: "/account",
+        path: "/account/:userID",
         element: <AccountPage />,
       },
       {
